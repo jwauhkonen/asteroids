@@ -19,8 +19,11 @@
 		
 		<script>
 			var canvasEl = document.getElementById("game-canvas");
+			canvasEl.width = 600;
+			canvasEl.height = 400;
+			
 			var ctx = canvasEl.getContext("2d");
-			var game = new Asteroids.Game();
+			var game = new Asteroids.Game(canvasEl.width, canvasEl.height);
 			
 			new Asteroids.GameView(
 				game,
