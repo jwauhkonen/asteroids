@@ -22,14 +22,32 @@
 			var canvasEl = document.getElementById("game-canvas");
 			canvasEl.width = 800;
 			canvasEl.height = 550;
+			var imageObj = new Image();
+			var images = new Array();
 			
 			var ctx = canvasEl.getContext("2d");
-			var game = new Asteroids.Game(canvasEl.width, canvasEl.height);
+			var game = new Asteroids.Game(canvasEl.width, canvasEl.height, images);
 			
-			new Asteroids.GameView(
-				game,
-				ctx
-			).start();
+			var newGame = function () {
+				new Asteroids.GameView(
+					game,
+					ctx
+				).start();
+			}
+			
+			// preload images
+			
+			images[0] = 'images/background.jpg';
+			images[1] = 'images/spaceship.png';
+			
+			var numLoaded = 0
+			imageObj.onload = function () {
+				newGame();
+			}
+			
+			for (var i = 0; i < images.length; i++) {
+				imageObj.src = images[i];
+			}
 		</script>
 	</body>
 </html>
