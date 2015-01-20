@@ -2,3 +2,26 @@
 	width: 800px;
 	height: 550px;
 }
+
+#header {
+	position: absolute;
+	width: 760px;
+	height: 150px;
+	border-color: white;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+}
+
+#hit-points {
+	float: left;
+	color: lightsteelblue;
+	font-size: 200%;
+	
+}
+
+#points {
+	float: right;
+	color: lightsteelblue;
+	font-size: 200%;
+}
