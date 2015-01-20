@@ -1,4 +1,11 @@
+#game-area {
+	margin: auto;
+	width: 800px;
+	height: 550px;
+}
+
 #game-canvas {
+	margin: auto;
 	width: 800px;
 	height: 550px;
 }
@@ -9,7 +16,7 @@
 	height: 150px;
 	border-color: white;
 	top: 20px;
-	left: 20px;
+	left: 220px;
 	z-index: 1000;
 }
 
